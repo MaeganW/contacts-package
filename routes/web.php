@@ -11,6 +11,11 @@
 |
 */
 
+Route::get('/', 'PagesController@home');
+Route::get('/form', 'PagesController@form');
+Route::get('/list', 'PagesController@list');
+Route::get('/profile', 'PagesController@profile');
+
 Route::get('/', function () {
     return view('home');
 })->name('home');

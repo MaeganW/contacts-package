@@ -77,9 +77,9 @@
               @yield('content')
               <br>
                 <div class="links">
-                    <a href="{{ route('home') }}">Home</a> /
-                    <a href="{{ route('form') }}">Create Contact</a> /
-                    <a href="{{ route('list') }}">View Contacts</a>
+                    <a href="/">Home</a> /
+                    <a href="/form">Create Contact</a> /
+                    <a href="/list">View Contacts</a>
                 </div>
             </div>
         </div>
