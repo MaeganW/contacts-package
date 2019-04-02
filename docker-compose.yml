@@ -1,0 +1,43 @@
+###############################################################################
+#                          Generated on phpdocker.io                          #
+###############################################################################
+version: "3.1"
+services:
+
+    postgres:
+      image: postgres:11.1-alpine
+      container_name: contacts-postgres
+      working_dir: /application
+      volumes:
+        - .:/application
+      environment:
+        - POSTGRES_USER=generic_db_user
+        - POSTGRES_PASSWORD=stronk-password
+        - POSTGRES_DB=laravel
+      ports:
+       - "5432:5432"  # TODO: disable in prod?
+
+    adminer:
+      container_name: contacts-adminer
+      image: adminer
+      restart: always
+      ports:
+        - 8080:8080
+
+    webserver:
+      image: nginx:alpine
+      container_name: contacts-webserver
+      working_dir: /application
+      volumes:
+          - .:/application
+          - ./phpdocker/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+      ports:
+       - "8000:80"
+
+    clevyr-laravel:
+      build: phpdocker/clevyr-laravel
+      container_name: contacts-laravel
+      working_dir: /application
+      volumes:
+        - .:/application
+        - ./phpdocker/clevyr-laravel/php-ini-overrides.ini:/etc/php/7.2/fpm/conf.d/99-overrides.ini
