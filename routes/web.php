@@ -12,5 +12,17 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('home');
+})->name('home');
+
+Route::get('/form', function () {
+    return view('form');
+})->name('form');
+
+Route::get('/list', function () {
+    return view('list');
+})->name('list');
+
+Route::get('/profile', function () {
+    return view('profile');
+})->name('profile');
