@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>@yield('title')</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -77,9 +77,9 @@
               @yield('content')
               <br>
                 <div class="links">
+                    <a href="{{ route('home') }}">Home</a> /
                     <a href="{{ route('form') }}">Create Contact</a> /
-                    <a href="{{ route('list') }}">View Contacts</a> /
-                    <a href="{{ route('home') }}">Go to Home</a>
+                    <a href="{{ route('list') }}">View Contacts</a>
                 </div>
             </div>
         </div>

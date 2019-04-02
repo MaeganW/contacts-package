@@ -1,4 +1,5 @@
 @extends('layout')
+@section('title', 'Form')
 
 @section('content')
     <div class="title m-b-md">
