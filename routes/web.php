@@ -13,21 +13,5 @@
 
 Route::get('/', 'PagesController@home');
 Route::get('/form', 'PagesController@form');
-Route::get('/list', 'PagesController@list');
+Route::get('/list', 'ListController@init');
 Route::get('/profile', 'PagesController@profile');
-
-Route::get('/', function () {
-    return view('home');
-})->name('home');
-
-Route::get('/form', function () {
-    return view('form');
-})->name('form');
-
-Route::get('/list', function () {
-    return view('list');
-})->name('list');
-
-Route::get('/profile', function () {
-    return view('profile');
-})->name('profile');
