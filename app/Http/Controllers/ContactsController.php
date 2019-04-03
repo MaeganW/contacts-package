@@ -17,7 +17,15 @@ class ContactsController extends Controller
     }
 
     public function store(){
-        return request()->all();
+        $contact = new Contact();
+        $contact->firstName = request('firstName');
+        $contact->lastName = request('lastName');
+        $contact->email = request('email');
+        $contact->address = request('address');
+        $contact->phone = request('phone');
+        $contact->save();
+        return redirect('/contacts');
+        // return request()->all();
     }
 
 
