@@ -1,9 +1,9 @@
 @extends('layout')
-@section('title', 'Form')
+@section('title', 'Create')
 
 @section('content')
     <div class="title m-b-md">
-        Form
+        Create A Contact
     </div>
 
     <form class="form" method="POST" action="/contacts">

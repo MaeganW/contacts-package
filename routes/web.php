@@ -14,6 +14,9 @@
 // defaults to /contacts
 Route::get('/', 'ContactsController@index');
 
+// this is shorthand for the below
+// Route::resource('Contacts', 'ContactsController')
+
 // Get /contacts (index)
 Route::get('/contacts', 'ContactsController@index');
 // POST /contacts (store)
