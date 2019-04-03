@@ -64,9 +64,8 @@ class ContactsController extends Controller
     public function edit(Contact $contact)
     // public function edit($id)
     {
-        $contact = Contact::find($contact->id);
+        // $contact = Contact::find($contact->id);
         return view('contacts.edit', compact('contact'));
-        // return view('contacts.edit', ['contact' => $contact]);
     }
 
     /**
@@ -78,7 +77,13 @@ class ContactsController extends Controller
      */
     public function update(Request $request, Contact $contact)
     {
-        //
+        $contact->firstName = request('firstName');
+        $contact->lastName = request('lastName');
+        $contact->email = request('email');
+        $contact->address = request('address');
+        $contact->phone = request('phone');
+        $contact->save();
+        return redirect('/contacts');
     }
 
     /**

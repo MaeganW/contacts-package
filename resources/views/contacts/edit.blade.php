@@ -6,8 +6,10 @@
         Edit Contact
     </div>
 
-    <form class="form">
-        {{-- {{ csrf_field() }} --}}
+    <form method="POST" action="/contacts/{{ $contact->id }}" class="form">
+        {{ method_field('PATCH') }}
+        {{ csrf_field() }}
+
         <label for="firstName" class="firstName">First Name</label>
         <input type="text" class="firstName" name="firstName" value="{{ $contact->firstName }}">
 
