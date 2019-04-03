@@ -1,0 +1,12 @@
+{
+    "name": "maeganwomble/contacts",
+    "description": "Contacts Pacakge",
+    "type": "project",
+    "authors": [
+        {
+            "name": "MaeganW",
+            "email": "maeganwomble@gmail.com"
+        }
+    ],
+    "require": {}
+}

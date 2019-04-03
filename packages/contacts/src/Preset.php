@@ -9,7 +9,7 @@ class Preset extends LaravelPreset
 {
     public static function install()
     {
-        // static::cleanSassDirectory();
+        static::cleanSassDirectory();
     }
 
     public static function cleanSassDirectory()
