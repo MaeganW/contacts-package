@@ -28,6 +28,14 @@
         <br>
         <button type="submit">Update Contact</button>
     </form>
+
+
+    <form method="POST" action="/contacts/{{ $contact->id }}">
+    {{ method_field('DELETE') }}
+    {{ csrf_field() }}
+
+        <button type="submit">Delete Contact</button>
+    </form>
     {{-- @foreach($contacts as $contact)
         <li>{{ $contact->firstName }}</li>
     @endforeach --}}
