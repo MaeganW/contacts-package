@@ -1,7 +1,7 @@
 {
-    "name": "laravel/laravel",
+    "name": "contacts/contacts-package",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "Contacts Package",
     "keywords": [
         "framework",
         "laravel"
