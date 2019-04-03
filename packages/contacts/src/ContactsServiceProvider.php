@@ -15,7 +15,8 @@ class ContactsServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->make('Contacts\ContactsController');
+        $this->loadViewsFrom(__DIR__.'/views', 'contacts');
     }
 
     /**
@@ -25,7 +26,8 @@ class ContactsServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadRoutesFrom(__DIR__ . '/routes/web.php');
+        // $this->loadRoutesFrom(__DIR__ . '/routes/web.php');
+        include __DIR__.'/routes/web.php';
 
         PresetCommand::macro('testing', function($command){
             Preset::install();
