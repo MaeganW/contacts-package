@@ -62,8 +62,11 @@ class ContactsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit(Contact $contact)
+    // public function edit($id)
     {
-        return view('contacts.edit');
+        $contact = Contact::find($contact->id);
+        return view('contacts.edit', compact('contact'));
+        // return view('contacts.edit', ['contact' => $contact]);
     }
 
     /**

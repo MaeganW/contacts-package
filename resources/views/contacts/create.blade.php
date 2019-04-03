@@ -23,6 +23,7 @@
         <label for="phone" class="phone">Phone</label>
         <input type="text" class="phone" name="phone">
 
+        <br>
         <button type="submit">Create Contact</button>
     </form>
 @endsection

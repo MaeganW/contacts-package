@@ -12,10 +12,10 @@
 */
 
 // defaults to /contacts
-Route::get('/', 'ContactsController@index');
+// Route::get('/', 'ContactsController@index');
 
 // this is shorthand for the below
-// Route::resource('Contacts', 'ContactsController')
+// Route::resource('contacts', 'ContactsController');
 
 // Get /contacts (index)
 Route::get('/contacts', 'ContactsController@index');
