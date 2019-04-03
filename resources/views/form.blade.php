@@ -6,7 +6,7 @@
         Form
     </div>
 
-    <form class="form" action="{{ route('profile') }}" method="get">
+    <form class="form" action="/profile" method="get">
         <label for="firstName" class="firstName">First Name</label>
         <input type="text" class="firstName" name="firstName">
 

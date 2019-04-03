@@ -13,5 +13,6 @@
 
 Route::get('/', 'PagesController@home');
 Route::get('/form', 'PagesController@form');
-Route::get('/list', 'ListController@init');
 Route::get('/profile', 'PagesController@profile');
+
+Route::get('/list', 'ListController@init');
