@@ -52,7 +52,6 @@ class ContactsController extends Controller
      */
     public function show(Contact $contact)
     {
-        $contact = Contact::findOrFail($contact->id);
         return view('contacts.show', compact('contact'));
     }
 
@@ -64,7 +63,6 @@ class ContactsController extends Controller
      */
     public function edit(Contact $contact)
     {
-        $contact = Contact::findOrFail($contact->id);
         return view('contacts.edit', compact('contact'));
     }
 
@@ -94,7 +92,7 @@ class ContactsController extends Controller
      */
     public function destroy(Contact $contact)
     {
-        Contact::findOrFail($contact->id)->delete();
+        $contact->delete();
         return redirect('/contacts');
     }
 }
