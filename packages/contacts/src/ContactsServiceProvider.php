@@ -29,6 +29,10 @@ class ContactsServiceProvider extends ServiceProvider
         // $this->loadRoutesFrom(__DIR__ . '/routes/web.php');
         include __DIR__.'/routes/web.php';
 
+        $this->publishes([
+            __DIR__.'/migrations' => base_path('database/migrations'),
+        ]);
+
         PresetCommand::macro('testing', function($command){
             Preset::install();
         });

@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('contacts::layout')
 @section('title', 'Contacts')
 
 @section('content')
