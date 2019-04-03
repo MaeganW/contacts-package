@@ -78,7 +78,7 @@
               <br>
                 <div class="links">
                     <a href="/">Home</a> /
-                    <a href="/form">Create Contact</a> /
+                    <a href="/contacts/create">Create Contact</a> /
                     <a href="/contacts">View Contacts</a>
                 </div>
             </div>

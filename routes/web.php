@@ -11,8 +11,8 @@
 |
 */
 
-Route::get('/', 'PagesController@home');
-Route::get('/form', 'PagesController@form');
-Route::get('/profile', 'PagesController@profile');
-
-Route::get('/contacts', 'ContactsController@init');
+Route::get('/', 'ContactsController@home');
+Route::get('/contacts', 'ContactsController@index');
+Route::post('/contacts', 'ContactsController@store');
+Route::get('/contacts/create', 'ContactsController@create');
+Route::get('/profile', 'ContactsController@profile');

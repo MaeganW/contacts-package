@@ -7,9 +7,27 @@ use App\Contact;
 
 class ContactsController extends Controller
 {
-    public function init() {
+    public function index() {
         $contacts = Contact::all();
-        // return $contacts;
         return view('contacts', ['contacts' =>  $contacts]);
+    }
+
+    public function create(){
+        return view('form');
+    }
+
+    public function store(){
+        return request()->all();
+    }
+
+
+
+
+    public function profile(){
+        return view('profile');
+    }
+
+    public function home(){
+        return view('home');
     }
 }
