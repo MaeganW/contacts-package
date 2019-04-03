@@ -16,7 +16,11 @@ class ContactsController extends Controller
     public function index()
     {
         $contacts = Contact::all();
-        return view('contacts.index', ['contacts' =>  $contacts]);    }
+        // return 'hello';
+        // dd($contacts);
+        // return view('contacts::index');
+        return view('contacts::index', ['contacts' => $contacts]);
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -25,7 +29,7 @@ class ContactsController extends Controller
      */
     public function create()
     {
-        return view('contacts.create');
+        return view('contacts::create');
     }
 
     /**
@@ -53,7 +57,7 @@ class ContactsController extends Controller
      */
     public function show(Contact $contact)
     {
-        return view('contacts.show', compact('contact'));
+        return view('contacts::show', compact('contact'));
     }
 
     /**
@@ -64,7 +68,7 @@ class ContactsController extends Controller
      */
     public function edit(Contact $contact)
     {
-        return view('contacts.edit', compact('contact'));
+        return view('contacts::edit', compact('contact'));
     }
 
     /**

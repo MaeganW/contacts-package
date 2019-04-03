@@ -12,22 +12,22 @@
 */
 
 // defaults to /contacts
-// Route::get('/', 'ContactsController@index');
+Route::get('/', 'Contacts\ContactsController@index');
 
 // this is shorthand for the below
-// Route::resource('contacts', 'ContactsController');
+// Route::resource('contacts', 'Contacts\ContactsController');
 
 // Get /contacts (index)
-Route::get('/contacts', 'ContactsController@index');
+Route::get('/contacts', 'Contacts\ContactsController@index');
 // POST /contacts (store)
-Route::post('/contacts', 'ContactsController@store');
+Route::post('/contacts', 'Contacts\ContactsController@store');
 // GET /contacts/create (create)
-Route::get('/contacts/create', 'ContactsController@create');
+Route::get('/contacts/create', 'Contacts\ContactsController@create');
 // GET /contacts/1 (show)
-Route::get('/contacts/{contact}', 'ContactsController@show');
+Route::get('/contacts/{contact}', 'Contacts\ContactsController@show');
 // GET /contacts/1/edit (edit)
-Route::get('/contacts/{contact}/edit', 'ContactsController@edit');
+Route::get('/contacts/{contact}/edit', 'Contacts\ContactsController@edit');
 // PATCH /contacts/1 (update)
-Route::patch('/contacts/{contact}', 'ContactsController@update');
+Route::patch('/contacts/{contact}', 'Contacts\ContactsController@update');
 // DELETE /contacts/1 (destroy)
-Route::delete('/contacts/{contact}', 'ContactsController@destroy');
+Route::delete('/contacts/{contact}', 'Contacts\ContactsController@destroy');
