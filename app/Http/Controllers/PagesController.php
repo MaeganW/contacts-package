@@ -12,8 +12,8 @@ class PagesController extends Controller
     public function form(){
         return view('form');
     }
-    public function list(){
-        return view('list');
+    public function contacts(){
+        return view('contacts');
     }
     public function profile(){
         return view('profile');

@@ -79,7 +79,7 @@
                 <div class="links">
                     <a href="/">Home</a> /
                     <a href="/form">Create Contact</a> /
-                    <a href="/list">View Contacts</a>
+                    <a href="/contacts">View Contacts</a>
                 </div>
             </div>
         </div>

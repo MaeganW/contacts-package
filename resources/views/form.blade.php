@@ -6,7 +6,7 @@
         Form
     </div>
 
-    <form class="form" action="/profile" method="get">
+    <form class="form" method="POST" action="/contacts">
         <label for="firstName" class="firstName">First Name</label>
         <input type="text" class="firstName" name="firstName">
 
@@ -16,9 +16,9 @@
         <label for="address" class="address">Address</label>
         <input type="text" class="address" name="address">
 
-        <label for="age" class="age">Age</label>
-        <input type="text" class="age" name="age">
+        <label for="phone" class="phone">Phone</label>
+        <input type="text" class="phone" name="phone">
 
-        <input type="submit">
+        <button type="submit">Create Contact</button>
     </form>
 @endsection

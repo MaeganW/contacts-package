@@ -1,9 +1,9 @@
 @extends('layout')
-@section('title', 'List')
+@section('title', 'Contacts')
 
 @section('content')
     <div class="title m-b-md">
-        List
+        Contacts
     </div>
 
     @foreach($contacts as $contact)
