@@ -47,7 +47,8 @@ class ContactsController extends Controller
         $contact->address = request('address');
         $contact->phone = request('phone');
         $contact->save();
-        return redirect('/contacts');    }
+        return redirect('/contacts');
+    }
 
     /**
      * Display the specified resource.
@@ -55,8 +56,9 @@ class ContactsController extends Controller
      * @param  \App\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function show(Contact $contact)
+    public function show($id)
     {
+        $contact = Contact::findOrFail($id);
         return view('contacts::show', compact('contact'));
     }
 
@@ -66,8 +68,9 @@ class ContactsController extends Controller
      * @param  \App\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function edit(Contact $contact)
+    public function edit($id)
     {
+        $contact = Contact::findOrFail($id);
         return view('contacts::edit', compact('contact'));
     }
 
@@ -78,8 +81,9 @@ class ContactsController extends Controller
      * @param  \App\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Contact $contact)
+    public function update(Request $request, $id)
     {
+        $contact = Contact::findOrFail($id);
         $contact->firstName = request('firstName');
         $contact->lastName = request('lastName');
         $contact->email = request('email');
@@ -95,8 +99,9 @@ class ContactsController extends Controller
      * @param  \App\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Contact $contact)
+    public function destroy($id)
     {
+        $contact = Contact::findOrFail($id);
         $contact->delete();
         return redirect('/contacts');
     }
