@@ -2,6 +2,7 @@
 
 namespace Contacts;
 
+use Contacts\Preset;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Foundation\Console\PresetCommand;
 
@@ -25,7 +26,7 @@ class ContactsServiceProvider extends ServiceProvider
     public function boot()
     {
         PresetCommand::macro('testing', function($command){
-            $command->info('It is working');
+            Preset::install();
         });
     }
 }
