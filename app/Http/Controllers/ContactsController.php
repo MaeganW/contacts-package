@@ -52,7 +52,8 @@ class ContactsController extends Controller
      */
     public function show(Contact $contact)
     {
-        //
+        $contact = Contact::findOrFail($contact->id);
+        return view('contacts.show', compact('contact'));
     }
 
     /**
@@ -62,7 +63,6 @@ class ContactsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit(Contact $contact)
-    // public function edit($id)
     {
         $contact = Contact::findOrFail($contact->id);
         return view('contacts.edit', compact('contact'));

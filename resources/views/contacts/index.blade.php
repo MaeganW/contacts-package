@@ -7,6 +7,10 @@
     </div>
 
     @foreach($contacts as $contact)
-        <li>{{ $contact->firstName }}</li>
+        <li>
+            <a href="/contacts/{{ $contact->id }}">
+                {{ $contact->firstName }} {{ $contact->lastName }}
+            </a>
+        </li>
     @endforeach
 @endsection
