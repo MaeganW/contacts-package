@@ -165,6 +165,7 @@ return [
         /*
          * Package Service Providers...
          */
+        Contacts\ContactsServiceProvider::class,
 
         /*
          * Application Service Providers...
