@@ -11,8 +11,20 @@
 |
 */
 
-Route::get('/', 'ContactsController@home');
+// defaults to /contacts
+Route::get('/', 'ContactsController@index');
+
+// Get /contacts (index)
 Route::get('/contacts', 'ContactsController@index');
+// POST /contacts (store)
 Route::post('/contacts', 'ContactsController@store');
+// GET /contacts/create (create)
 Route::get('/contacts/create', 'ContactsController@create');
-Route::get('/profile', 'ContactsController@profile');
+// GET /contacts/1 (show)
+Route::get('/contacts/{contact}', 'ContactsController@show');
+// GET /contacts/1/edit (edit)
+Route::get('/contacts/{contact}/edit', 'ContactsController@edit');
+// PATCH /contacts/1 (update)
+Route::patch('/contacts/{contact}', 'ContactsController@update');
+// DELETE /contacts/1 (destroy)
+Route::delete('/contacts/{contact}', 'ContactsController@destroy');
