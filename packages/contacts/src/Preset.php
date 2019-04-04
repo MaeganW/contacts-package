@@ -9,12 +9,17 @@ class Preset extends LaravelPreset
 {
     public static function install()
     {
-        static::cleanSassDirectory();
+        static::noOp();
     }
 
     public static function cleanSassDirectory()
     {
         File::cleanDirectory(resource_path('/sass'));
+    }
+
+    public static function noOp()
+    {
+        echo 'does nothing for now';
     }
 
     // can also have a function to install with specific composer dependencies

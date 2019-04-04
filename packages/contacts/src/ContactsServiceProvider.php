@@ -26,7 +26,6 @@ class ContactsServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        // $this->loadRoutesFrom(__DIR__ . '/routes/web.php');
         include __DIR__.'/routes/web.php';
 
         $this->publishes([
