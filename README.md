@@ -1,12 +1,29 @@
 # Contacts Package
 
-Add new package to providers array in app.php
-Add to the composer.json autoload psr-4 config
+Add this package to providers in app.php
+```
+Contacts\ContactsServiceProvider::class,
+```
 
+Now in the composer.json add the following to the autoload psr-4 config:
+```
+"Contacts\\": "vendor/maeganw/contacts/contacts/src"
+```
+
+In the command line run:
+
+```
 composer dump-autoload
+```
 
+```
 php artisan vendor:publish
+```
 
+```
 php artisan make:model Contact
+```
 
+```
 php artisan migrate
+```
