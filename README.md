@@ -10,7 +10,7 @@ Now in the composer.json add the following to the autoload psr-4 config:
 "Contacts\\": "vendor/maeganw/contacts/contacts/src"
 ```
 
-In the command line run:
+In the command line ⚙ run:
 
 ```
 composer dump-autoload
